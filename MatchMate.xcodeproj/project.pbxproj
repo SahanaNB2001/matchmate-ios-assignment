@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		95517CC030356BF8003CA633 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 95517CBF30356BF8003CA633 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		95517C903034DBFF003CA633 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		95517C803034DBFE003CA633 /* MatchMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95517C8F3034DBFF003CA633 /* MatchMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatchMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95517C993034DBFF003CA633 /* MatchMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatchMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95517CBF30356BF8003CA633 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		95517C773034DBFE003CA633 = {
 			isa = PBXGroup;
 			children = (
+				95517CBF30356BF8003CA633 /* README.md */,
 				95517C823034DBFE003CA633 /* MatchMate */,
 				95517C923034DBFF003CA633 /* MatchMateTests */,
 				95517C9C3034DBFF003CA633 /* MatchMateUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95517CC030356BF8003CA633 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

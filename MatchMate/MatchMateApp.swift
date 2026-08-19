@@ -10,23 +10,27 @@ import SwiftData
 
 @main
 struct MatchMateApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+    let container: ModelContainer
+    let repository: ProfileRepository
 
+    init() {
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            let schema = Schema([ProfileEntity.self])
+            let configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+            container = try ModelContainer(for: schema, configurations: [configuration])
+            repository = ProfileRepository(
+                api: RandomUserAPI(),
+                modelContainer: container
+            )
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            fatalError("Unable to create SwiftData container: \(error)")
         }
-    }()
+    }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProfileListView(viewModel: ProfileListViewModel(repository: repository))
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(container)
     }
 }
